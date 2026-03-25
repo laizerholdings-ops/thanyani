@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANYANI CLEANING BUSINESS ENTERPRISE PTY (LTD) - Sparkle, Shine, Done Right.</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script type="module" src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Precise Color Matching from Business Card -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'thanyani-teal': '#26A69A', 
+                        'thanyani-lime': '#8BC34A', 
+                        'thanyani-dark': '#1a3d3a',
+                        'thanyani-bg': '#f0f9f8',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+
+        /* Animation for main CTAs */
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .cta-pulse { animation: pulse-subtle 3s ease-in-out infinite; }
+
+        /* Scroll reveal animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Responsive adjustments for logo */
+        .logo-container img {
+            max-height: 60px;
+        }
+        @media (max-width: 640px) {
+            .logo-container img { max-height: 48px; }
+        }
+
+        /* Video styling */
+        .video-overlay {
+            background: linear-gradient(to bottom, rgba(26, 61, 58, 0.7), rgba(26, 61, 58, 0.5));
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50 text-gray-800 antialiased">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 sm:h-20">
+            <!-- Logo Section -->
+            <a href="#home" class="logo-container flex items-center">
+                <img id="main-logo" src="logo.png" alt="THANYANI Logo" 
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x120/26A69A/FFFFFF?text=THANYANI+CLEANING'">
+            </a>
+
+            <!-- Simplified Headers (Desktop) -->
+            <div class="hidden md:flex space-x-10">
+                <a href="#home" class="text-sm uppercase tracking-wider font-bold text-gray-600 hover:text-thanyani-teal transition">Home</a>
+                <a href="#services" class="text-sm uppercase tracking-wider font-bold text-gray-600 hover:text-thanyani-teal transition">Services</a>
+                <a href="#about" class="text-sm uppercase tracking-wider font-bold text-gray-600 hover:text-thanyani-teal transition">About Us</a>
+                <a href="#contact" class="text-sm uppercase tracking-wider font-bold text-gray-600 hover:text-thanyani-teal transition">Contacts</a>
+            </div>
+
+            <!-- Get a Quote Button -->
+            <a href="#quote" class="hidden md:inline-block bg-thanyani-lime hover:bg-thanyani-teal text-white font-bold py-2.5 px-6 rounded-full shadow-md transition duration-300 transform hover:-translate-y-0.5">
+                Get a Quote
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-thanyani-teal focus:outline-none">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="flex flex-col space-y-1 px-4 py-4">
+                <a href="#home" class="mobile-link block py-3 px-4 text-gray-700 font-bold hover:bg-thanyani-bg rounded-lg">Home</a>
+                <a href="#services" class="mobile-link block py-3 px-4 text-gray-700 font-bold hover:bg-thanyani-bg rounded-lg">Services</a>
+                <a href="#about" class="mobile-link block py-3 px-4 text-gray-700 font-bold hover:bg-thanyani-bg rounded-lg">About Us</a>
+                <a href="#contact" class="mobile-link block py-3 px-4 text-gray-700 font-bold hover:bg-thanyani-bg rounded-lg">Contacts</a>
+                <a href="#quote" class="block text-center mt-4 bg-thanyani-lime text-white py-3 rounded-xl font-bold">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Reverted Video -->
+        <section id="home" class="relative min-h-[75vh] sm:h-[85vh] flex items-center justify-center overflow-hidden">
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                <source src="background.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 video-overlay z-10"></div>
+            <div class="relative max-w-5xl mx-auto px-6 text-center z-20">
+                <h1 class="text-4xl sm:text-6xl font-black text-white mb-6 leading-tight drop-shadow-2xl fade-in-up">
+                    Sparkle, Shine, <br class="hidden sm:block"><span class="text-thanyani-lime">Done Right.</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-medium fade-in-up">
+                    THANYANI CLEANING BUSINESS ENTERPRISE PTY (LTD). <br class="sm:hidden"> Professional cleaning solutions across Gauteng.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up">
+                    <a href="#quote" class="bg-thanyani-lime hover:bg-white hover:text-thanyani-teal text-white font-bold py-4 px-10 rounded-full shadow-xl transition duration-300 cta-pulse text-lg">
+                        Book a Cleaning
+                    </a>
+                    <a href="#services" class="bg-white/10 backdrop-blur-md border border-white/40 text-white font-bold py-4 px-10 rounded-full hover:bg-white/20 transition duration-300 text-lg">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section with All Original Images -->
+        <section id="services" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-thanyani-dark mb-4">Professional Services</h2>
+                    <div class="w-20 h-2 bg-thanyani-lime mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="Commercial + Industrial Cleaning.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Commercial+Cleaning'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Commercial & Industrial</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">Heavy-duty cleaning for warehouses, factories, and large corporate facilities.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="office cleaning.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Office+Cleaning'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Office Cleaning</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">Ensuring a hygienic and productive workspace environment for your staff.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="Adhoc Deep Cleaning.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Deep+Cleaning'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Adhoc Deep Cleaning</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">Intensive restoration cleaning for move-ins, move-outs, or post-construction.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="Window & Carpet Cleaning.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Carpet+Cleaning'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Window & Carpet</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">Specialized steam cleaning and streak-free window solutions for all properties.</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="Hygiene & Pest Control Services.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Pest+Control'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Hygiene & Pest Control</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">Complete sanitary services and effective pest management across Gauteng.</p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="Entrance Matts.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Mats'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Entrance Matts</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">Professional mat supply and maintenance for cleaner, safer commercial floors.</p>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="Supplies of Cleaning Materials.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Supplies'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Cleaning Supplies</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">High-quality eco-friendly cleaning detergents and materials available for order.</p>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="Garden Services.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Garden'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Garden Services</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">Expert landscaping and regular maintenance for homes and office parks.</p>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group fade-in-up">
+                        <img src="Residential Cleaning.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://placehold.co/600x400/26A69A/FFFFFF?text=Residential'">
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold text-thanyani-teal mb-3">Residential Cleaning</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm">Reliable and trustworthy domestic cleaning tailored to your family's needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials - 3 South African Testimonies -->
+        <section id="about" class="py-20 bg-thanyani-bg">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-thanyani-dark mb-12 fade-in-up">South African Reviews</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm fade-in-up border-l-8 border-thanyani-lime">
+                        <div class="flex text-thanyani-lime mb-4"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+                        <p class="text-gray-600 italic mb-6">"Azwindini and his team are phenomenal. They deep cleaned our Daveyton office over the weekend. Professional and reliable service!"</p>
+                        <p class="font-bold text-thanyani-teal">Lerato Mofokeng</p>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Gauteng</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm fade-in-up border-l-8 border-thanyani-teal">
+                        <div class="flex text-thanyani-teal mb-4"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+                        <p class="text-gray-600 italic mb-6">"Eish! The garden services are top notch. My yard is now the best in the street. Honest people who do a great job every time."</p>
+                        <p class="font-bold text-thanyani-teal">Sibusiso Nkosi</p>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Benoni</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm fade-in-up border-l-8 border-thanyani-lime">
+                        <div class="flex text-thanyani-lime mb-4"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+                        <p class="text-gray-600 italic mb-6">"Fantastic carpet cleaning. They removed stains that I thought were permanent. Professional service from start to finish."</p>
+                        <p class="font-bold text-thanyani-teal">Sarah van der Merwe</p>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Johannesburg</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section - 5 Questions -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-thanyani-teal mb-10 fade-in-up">Frequently Asked Questions</h2>
+                <div class="space-y-3 fade-in-up">
+                    <div class="border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                        <button class="faq-btn w-full flex justify-between items-center p-5 text-left font-bold text-thanyani-dark hover:bg-thanyani-bg transition">
+                            <span>Which areas in South Africa do you cover?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-thanyani-lime transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 pt-0 text-gray-600 text-sm">We are primarily based in Daveyton and cover the greater Gauteng region, including Johannesburg, Pretoria, and the East Rand.</div>
+                    </div>
+                    <div class="border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                        <button class="faq-btn w-full flex justify-between items-center p-5 text-left font-bold text-thanyani-dark hover:bg-thanyani-bg transition">
+                            <span>Are your cleaning chemicals safe for pets?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-thanyani-lime transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 pt-0 text-gray-600 text-sm">Yes, we prioritize eco-friendly and non-toxic cleaning products that are safe for both pets and children.</div>
+                    </div>
+                    <div class="border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                        <button class="faq-btn w-full flex justify-between items-center p-5 text-left font-bold text-thanyani-dark hover:bg-thanyani-bg transition">
+                            <span>How do I verify your company registration?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-thanyani-lime transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 pt-0 text-gray-600 text-sm">Our official Enterprise number is K2025802052. We can provide full CIPC documentation upon request.</div>
+                    </div>
+                    <div class="border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                        <button class="faq-btn w-full flex justify-between items-center p-5 text-left font-bold text-thanyani-dark hover:bg-thanyani-bg transition">
+                            <span>Do you offer contract cleaning for offices?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-thanyani-lime transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 pt-0 text-gray-600 text-sm">Absolutely! We offer flexible daily, weekly, or monthly maintenance contracts tailored to your business needs.</div>
+                    </div>
+                    <div class="border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                        <button class="faq-btn w-full flex justify-between items-center p-5 text-left font-bold text-thanyani-dark hover:bg-thanyani-bg transition">
+                            <span>What happens if I'm not happy with a clean?</span>
+                            <i data-lucide="plus" class="w-5 h-5 text-thanyani-lime transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 pt-0 text-gray-600 text-sm">We guarantee our work. If you aren't satisfied, notify us within 24 hours and we will return to rectify the issue at no extra cost.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Quote Section -->
+        <section id="quote" class="py-20 bg-thanyani-teal text-white">
+            <div class="max-w-4xl mx-auto px-4">
+                <div id="contact" class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="fade-in-up">
+                        <h2 class="text-4xl font-black mb-6">Get a Quote</h2>
+                        <p class="text-lg opacity-90 mb-10 leading-relaxed">
+                            Ready to experience a professional touch? Send us your details and Managing Director <span class="text-thanyani-lime font-bold">Azwindini Thanyani</span> will contact you personally.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-white/10 rounded-xl"><i data-lucide="phone" class="text-thanyani-lime"></i></div>
+                                <span>060 911 6865</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-white/10 rounded-xl"><i data-lucide="mail" class="text-thanyani-lime"></i></div>
+                                <span class="break-all">azwindiniamenthanyani@gmail.com</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-white/10 rounded-xl"><i data-lucide="map-pin" class="text-thanyani-lime"></i></div>
+                                <span>846 Lubedlane Street, Daveyton, 1520</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="https://formspree.io/f/mgvpjgre" method="POST" class="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl text-gray-800 fade-in-up">
+                        <div class="space-y-5">
+                            <div>
+                                <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-5 py-3.5 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-thanyani-teal outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2">Phone / WhatsApp</label>
+                                <input type="tel" name="phone" required class="w-full px-5 py-3.5 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-thanyani-teal outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-5 py-3.5 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-thanyani-teal outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2">Message</label>
+                                <textarea name="message" rows="3" placeholder="Tell us about your cleaning needs..." class="w-full px-5 py-3.5 bg-gray-50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-thanyani-teal outline-none transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-thanyani-lime hover:bg-thanyani-dark text-white font-black rounded-xl transition duration-300 shadow-xl uppercase tracking-widest">
+                                Send My Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-thanyani-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex flex-col items-center mb-10">
+                <img src="logo.png" class="h-10 mb-6" onerror="this.src='https://placehold.co/150x50/26A69A/FFFFFF?text=THANYANI'">
+                <p class="text-gray-400 text-sm max-w-md">Professional maintenance and cleaning services based in Daveyton, Gauteng. <br>Reg No: K2025802052</p>
+            </div>
+            <p class="text-xs text-gray-500 uppercase tracking-widest border-t border-gray-800 pt-8">
+                &copy; 2025 THANYANI CLEANING BUSINESS ENTERPRISE PTY (LTD).
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            
+            menuBtn.onclick = () => mobileMenu.classList.toggle('hidden');
+            mobileLinks.forEach(link => {
+                link.onclick = () => mobileMenu.classList.add('hidden');
+            });
+
+            // FAQ Logic
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isHidden = content.classList.contains('hidden');
+                    
+                    document.querySelectorAll('.faq-btn + div').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if(isHidden) {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(45deg)';
+                    }
+                };
+            });
+
+            // Scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('animate-active');
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            
+            if (window.lucide) window.lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
